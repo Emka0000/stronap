@@ -1,0 +1,397 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato|Oswald);
+* {
+	box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+	font-family: 'Oswald', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header img {
+    height: 70px;
+    width: auto;
+    margin-left: 10px;
+}
+
+h2,
+h3,
+a {
+	color: #34495e;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+    overflow: hidden;
+    top: 0; 
+    width: 100%;
+    visibility: hidden;
+    z-index: 9999;
+}
+.header.fixed {
+    position: fixed;
+    visibility: visible;
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;   
+}
+
+.main-nav a {
+    display: inline-block;
+	color: #34495e;
+	font-size: .99em;
+    height: 100%;
+}
+
+.main-nav a:hover {
+	color: #da291c;
+}
+
+
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+.wesprzyj a {
+    color: white;
+}
+.wesprzyj {
+    background-color: #da291c;
+}
+
+.wesprzyj a:hover {
+    color: white;
+    background-color: #971f1779;
+}
+
+#onas {
+    background: linear-gradient(#00000080, #00000080), url(background-image.jpg); /* Ścieżka do obrazka */
+    background-size: cover; /* Dopasowanie obrazka do wielkości tła */
+    background-position: center; /* Pozycja obrazka na tle */
+    background-attachment: fixed;
+    color: #fff; /* Kolor tekstu */
+    padding: 20px; /* Wewnętrzny margines dla tekstu */  
+    vertical-align: middle;
+    text-align: center;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#onas div {
+    overflow: hidden;
+    transform: translateY(calc(var(--window-scroll-y) * 0.25));
+}
+
+#onas h1 {
+    font-size: clamp(28px, 10vw,62px);
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.09;
+    letter-spacing: -1.6px;
+}
+
+
+#onas p {
+    /* margin-right: 300px;
+    margin-left: 300px; */
+    margin: 0 clamp(10px, 10%, 400px);
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+}
+
+#onas button {
+    background-color: #da291c;
+    border-radius: 4px;
+    border-color: rgba(255, 255, 255, 0);
+    height: 65px;
+    width: 200px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-size: 17pt;
+    margin-bottom: 40px;
+    transition: 0.15s cubic-bezier(0.075, 0.82, 0.165, 1) all,
+                0.95s cubic-bezier(0.075, 0.82, 0.165, 1) letter-spacing;
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 #00000080;
+}
+#onas button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px 0 #000000a0,
+                15px 0px 10px -9px #ff4b42,
+                -15px 0px 10px -9px #ff4b42,
+                30px 0px 30px -3px #ff2f20bf,
+                -30px 0px 30px -3px #ff2f20bf;
+    letter-spacing: 4px;
+}
+
+main {
+    padding: 0 clamp(1em, 5vw, 30em);
+    margin-top: -2.5em;
+    border-radius: 2.5em 2.5em 0 0;
+    z-index: 200;
+    border-top: 2.5em solid white;
+}
+section {
+    scroll-margin-top: 88px;
+}
+
+#Odkryj {
+    padding-top: 4em;
+    font-family: 'Lato', sans-serif;
+}
+#Odkryj > div {
+    width: 100%;
+    clear: both;
+    display: flex;
+    gap: 4em;
+    padding: 2em;
+    font-size: 16pt;
+}
+#Odkryj > div:nth-child(even) {
+    float: right;
+}
+#Odkryj img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1em;
+}
+
+#Turystyka {
+    text-align: center;
+    width: max(50%, 300px);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Turystyka::before {
+    position: absolute;
+    z-index: -1;
+    content: url("Plama.svg");
+    left: -90%;
+    transform: scaleY(-1);
+}
+
+#Turystyka p {
+    font-family: 'Lato', sans-serif;
+    font-size: 16pt;
+}
+
+#Turystyka h2 {
+    font-size: 42px;
+    text-transform: uppercase;
+}
+
+#Turystyka button {
+    background-color: #da291c;
+    border-radius: 4px;
+    border-color: transparent;
+    height: 55px;
+    width: 220px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-size: large;
+}
+#Turystyka button a {
+    text-decoration: none;
+    color: white;
+}
+
+#Turystyka button:hover {
+    color: white;
+    background-color: #971f1779;
+}
+
+details summary {
+    cursor: pointer;
+    background-color: rgb(225, 225, 225);
+    font-size: 16pt;
+    border-radius: 1em;
+}
+details[open] summary {
+    border-radius: 1em 1em 0 0;
+}
+details {
+    background-color: rgb(244, 244, 244);
+    border-radius: 1em;
+}
+details p {
+    display: block;
+    padding: 1em;
+}
+
+.bogata-historia {
+    background: linear-gradient(#00000080, #00000080), url(bogata.jpg); 
+}
+
+.liderzy{
+    background: linear-gradient(#00000080, #00000080), url(lekkoatletyka.jpg); 
+}
+
+.Inne {
+    background: linear-gradient(#00000080, #00000080), url(siata.jpg); 
+}
+
+.Wyzwania {
+    background: linear-gradient(#00000080, #00000080), url(tenis.jpg); 
+}
+
+#Sport {
+    position: relative;
+    font-size: 16pt;
+    z-index: 50;
+}
+#Sport::before {
+    position: absolute;
+    content: url("Plama.svg");
+    right: 0;
+    z-index: -100;
+    transform: scaleX(-1);
+}
+#Sport .flex {
+    display: flex;
+    gap: 1em;
+    overflow-x: scroll;
+    width: calc(100vw - 10px);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0 2em;
+    transition: 0.25s ease-in-out;
+}
+#Sport div div {
+    justify-content: space-between;
+    border-radius: 1em;
+    padding: 1em;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    transition: ease-in-out 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Sport div div h3 {
+    color: white;
+    font-size: 24pt;
+    text-align: center;
+}
+#Sport div div p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 4px 8px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    width: auto;
+    font-size: 20px;
+    visibility: collapse;
+}
+#Sport div div.expanded p {
+    visibility: visible;
+}
+#Sport div div.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    box-shadow: 0 0 25px 0px #00000080;
+}
+
+.Wyzwania, .Inne, .liderzy, .bogata-historia {
+    /* margin-bottom: 2%;  */
+    width: 600px;
+    height: 600px;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+#Sport h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#Sport p {
+    font-family: 'Lato';
+    width: calc(600px - 2em);
+}
+
+#Sport h2 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+#Sport > div {
+    color: white;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1064px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
