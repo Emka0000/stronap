@@ -18,20 +18,15 @@ ul {
   list-style: none;
 }
 
-header img {
-    height: 70px;
-    width: auto;
-    margin-left: 10px;
-}
 
 h2,
 h3,
 a {
-	color: #34495e;
+    color: #34495e;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .header {
@@ -51,27 +46,36 @@ a {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 0 0 5px 5px;
-
+    
     transition: all 0.2s ease-out;
 }
-.header.transparent {
+.header.transparent:not(.mobile-open) {
     background-color: #00000000;
     border-color: #00000000;
     -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.0);
     -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.0);
     box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.0);
 }
-.header.transparent a {
+.header.transparent:not(.mobile-open) a {
     color: white;
-}
-.header.transparent img {
-    filter: brightness(0) invert(1);
 }
 .header.fixed {
     position: fixed;
     visibility: visible;
 }
-
+.header #hamburger {
+    float: right;
+    margin-right: .5em;
+    scale: 75%;
+}
+.header img {
+    height: 70px;
+    width: auto;
+    margin-left: 10px;
+}
+.header.transparent:not(.mobile-open) img {
+    filter: brightness(0) invert(1);
+}
 .main-nav {
 	margin-top: 5px;
 }
@@ -118,7 +122,7 @@ a {
     vertical-align: middle;
     text-align: center;
     height: fit-content;
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,15 +191,13 @@ section {
     font-family: 'Lato', sans-serif;
 }
 #Odkryj > div {
-    width: 100%;
-    clear: both;
     display: flex;
     gap: 4em;
     padding: 2em;
     font-size: 16pt;
 }
-#Odkryj > div:nth-child(even) {
-    float: right;
+#Odkryj > div > div {
+    width: 50%;
 }
 #Odkryj img {
     object-fit: cover;
@@ -406,12 +408,25 @@ border-radius: 10px;
 		flex-direction: column;
 		align-items: center;
     	.header{
-		width: 80%;
-		margin: 0 auto;
-		max-width: 1150px;
-	}
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+	    }
+        
+        #hamburger {
+            visibility: collapse;
+        }
 	}
 
+}
+@media (max-width: 769px) {
+    .header {
+        clip-path: inset(0 0 280px 0);
+
+        &.mobile-open {
+            clip-path: inset(0 0 0 0);
+        }
+    }
 }
 
 @media (min-width: 1064px) {
@@ -419,5 +434,4 @@ border-radius: 10px;
 		flex-direction: row;
 		justify-content: space-between;
 	}
-
 }

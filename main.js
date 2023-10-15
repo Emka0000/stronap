@@ -22,3 +22,7 @@ document.addEventListener("scroll", (e) => {
     }
     document.querySelector(":root").style.setProperty('--window-scroll-y', `${window.scrollY}px`)
 })
+
+document.getElementById("hamburger").addEventListener("click", (e) => {
+    document.getElementsByClassName("header")[0].classList.toggle("mobile-open")
+})
