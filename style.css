@@ -111,6 +111,7 @@ a {
 }
 #onas div {
     overflow: hidden;
+    transform: translateY(calc(var(--window-scroll-y) * 0.25));
 }
 
 #onas h1 {
@@ -141,13 +142,19 @@ a {
     font-family: 'Oswald';
     font-size: 17pt;
     margin-bottom: 40px;
-    transition: 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 0.15s cubic-bezier(0.075, 0.82, 0.165, 1) all,
+                0.95s cubic-bezier(0.075, 0.82, 0.165, 1) letter-spacing;
     cursor: pointer;
+    box-shadow: 0 0 15px 0 #00000080;
 }
 #onas button:hover {
     transform: translateY(-4px);
-    box-shadow: 30px 0px 30px -3px #ff2f20bf,
+    box-shadow: 0 0 15px 0 #000000a0,
+                15px 0px 10px -9px #ff4b42,
+                -15px 0px 10px -9px #ff4b42,
+                30px 0px 30px -3px #ff2f20bf,
                 -30px 0px 30px -3px #ff2f20bf;
+    letter-spacing: 4px;
 }
 
 main {
