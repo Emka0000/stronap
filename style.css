@@ -310,6 +310,7 @@ details p {
     padding: 0 2em;
     transition: 0.25s ease-in-out;
 }
+
 #Sport div div {
     justify-content: space-between;
     border-radius: 1em;
@@ -368,7 +369,7 @@ details p {
 
 #Sport p {
     font-family: 'Lato';
-    width: calc(600px - 2em);
+    width: calc(500px - 2em);
 }
 
 #Sport h2 {
