@@ -443,6 +443,46 @@ h6 span {
             clip-path: inset(0 0 0 0);
         }
     }
+    #onas h1{
+        font-size: 300%!important;
+    }
+    #onas p{
+        font-size: 130%!important;
+    }
+
+}
+@media (max-width: 511px) {
+    #onas h1{
+        font-size: 290%!important;
+    }
+    #onas p{
+        font-size: 120%!important;
+    }
+    
+    #onas button {
+        width: 120px;
+        font-size: 100%!important;
+        height: 55px;
+    }
+    
+}
+@media (max-width: 433px) {
+   #onas h1{
+        font-size: 270%!important;
+    }
+}   
+@media (max-width: 400px) {
+    #onas h1{
+        font-size: 170%!important;
+    }
+    #onas p{
+        font-size: 100%!important;
+    }
+    #onas button {
+        width: 100px;
+        font-size: 100%!important;
+        height: 50px;
+    }
 }
 
 @media (min-width: 1064px) {
@@ -450,4 +490,67 @@ h6 span {
 		flex-direction: row;
 		justify-content: space-between;
 	}
+}
+
+@media (max-width: 613px) {
+    #onas h1{
+        font-size: 280%!important;
+    }
+    #onas p{
+        font-size: 120%!important;
+    }
+}
+
+@media (max-width: 570px) {
+    #onas p{
+        font-size: 110%!important;
+    }
+}
+
+@media (max-width: 1043px) {
+    #onas h1{
+        font-size:290%!important;
+    }
+}
+
+@media (max-width: 1005px) {
+    #onas h1{
+        font-size: 260%!important;
+    }
+}
+@media (max-width: 995px) {
+    #onas h1{
+        font-size: 250%!important;
+    }
+    #onas p{
+        font-size: 130%!important;
+    }
+}
+
+@media (max-width: 859px) {
+    #onas h1{
+        font-size: 230%!important;
+    }
+    #onas p{
+        font-size: 115%!important;
+    }
+}
+
+
+@media (max-width: 492px) {
+    #onas h1{
+        font-size: 230%!important;
+    }
+    #onas p{
+        font-size: 115%!important;
+    }
+}
+
+@media (max-width: 370px) {
+    #onas h1{
+        font-size: 170%!important;
+    }
+    #onas p{
+        font-size: 100%!important;
+    }
 }
