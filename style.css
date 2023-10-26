@@ -64,7 +64,9 @@ a {
     visibility: visible;
 }
 .header #hamburger {
-    float: right;
+    /* float: right; */
+    position: absolute;
+    right: 5px;
     margin-right: .5em;
     scale: 75%;
 }
@@ -121,18 +123,18 @@ a {
     vertical-align: middle;
     text-align: center;
     height: fit-content;
-    min-height: 110vh;
+    min-height: max(110vh, 900px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #onas div {
     overflow: hidden;
-    transform: translateY(calc(var(--window-scroll-y) * 0.25));
+    /* transform: translateY(calc(var(--window-scroll-y) * 0.25)); */
 }
 
 #onas h1 {
-    font-size: clamp(28px, 10vw,62px);
+    font-size: clamp(28px, 4vw,62px);
     text-transform: uppercase;
     color: #fff;
     line-height: 1.09;
@@ -145,7 +147,7 @@ a {
     margin-left: 300px; */
     margin: 0 clamp(10px, 10%, 400px);
     font-family: 'Lato', sans-serif;
-    font-size: 22px;
+    font-size: clamp(17.5px, 5vw, 22px);
 }
 
 #onas button {
@@ -194,6 +196,9 @@ section {
     gap: 4em;
     padding: 2em;
     font-size: 16pt;
+}
+#Odkryj > div:nth-child(2n) {
+    flex-direction: row-reverse;
 }
 #Odkryj > div > div {
     width: 50%;
@@ -488,7 +493,7 @@ h6 span {
   }
   
   .wrapper {
-    height: 50vh;
+    height: 128px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -504,7 +509,7 @@ h6 span {
       padding: 10px 45px;
       text-decoration: none;
       font-family: 'Poppins', sans-serif;
-      font-size: 40px;
+      font-size: clamp(25px, 9vw, 40px);
       color: white;
       background: #da291c;
       transition: 1s;
@@ -536,10 +541,16 @@ h6 span {
     }
   
     span:nth-child(2) {
-      width: 20px;
+      width: clamp(0px, calc(6vw - 20px), 20px);
       margin-left: 30px;
       position: relative;
       top: 12%;
+      /* scale: min(calc(5vw * 0.001), 1); */
+    }
+
+    .cta svg {
+        aspect-ratio: 1/1;
+        width: clamp(30px, 6.5vw, 66px);
     }
     
   /**************SVG****************/
@@ -648,19 +659,25 @@ button {
     .header {
         clip-path: inset(0 0 280px 0);
 
-        &.mobile-open {
-            clip-path: inset(0 0 0 0);
-        }
     }
-    #onas h1{
+    .mobile-open {
+        clip-path: inset(0 0 0px 0);
+    }
+    #Odkryj > div {
+        display: block;
+    }
+    #Odkryj > div > div {
+        width: auto;
+    }
+    /* #onas h1{
         font-size: 300%!important;
     }
     #onas p{
         font-size: 130%!important;
-    }
+    } */
 
 }
-
+/* 
 @media (max-width: 1136px) {
     #kontakt .item{
         margin-bottom: 30px;
@@ -690,7 +707,7 @@ button {
 }
 @media (max-width: 365px){ 
     #zrealizowane-projekty p{
-        font-size: 10px!important;
+        font-size: 10px;
     }
     #zrealizowane-projekty h3{
         font-size: 15px;
@@ -702,18 +719,11 @@ button {
     }
 }   
 @media (max-width: 400px) {
-    #onas h1{
-        font-size: 170%!important;
-    }
-    #onas p{
-        font-size: 100%!important;
-    }
     #onas button {
         width: 100px;
-        font-size: 100%!important;
         height: 50px;
     }
-}
+} */
 
 @media (min-width: 1064px) {
 	.header {
@@ -722,7 +732,7 @@ button {
 	}
    
 }
-
+/* 
 @media (max-width: 613px) {
     #onas h1{
         font-size: 280%!important;
@@ -784,4 +794,4 @@ button {
     #onas p{
         font-size: 100%!important;
     }
-}
+} */
