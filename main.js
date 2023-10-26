@@ -12,17 +12,6 @@ for (let i = 0; i < gallery.children.length; i++) {
     })
 }
 document.addEventListener("scroll", (e) => {
-    if (window.scrollY == 0) {
-        document.getElementsByClassName("header")[0].classList.add("transparent")
-    } else {
-        document.getElementsByClassName("header")[0].classList.remove("transparent")
-    }
-    for (let j = 0; j < gallery.children.length; j++) {
+    for (let j = 0; j < gallery.children.length; j++)
         gallery.children[j].classList.remove("expanded")
-    }
-    document.querySelector(":root").style.setProperty('--window-scroll-y', `${window.scrollY}px`)
-})
-
-document.getElementById("hamburger").addEventListener("click", (e) => {
-    document.getElementsByClassName("header")[0].classList.toggle("mobile-open")
 })
