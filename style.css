@@ -109,7 +109,6 @@ a {
 
 .wesprzyj a:hover {
     color: white;
-    background-color: #971f1779;
 }
 
 #onas {
@@ -597,11 +596,12 @@ h6 span {
 .wesprzyj:hover { 
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);  
+    background-color: #9e2b23;
   }
 
 .wesprzyj:after {
     content:  '<3';
-    color: #e74c3c;
+    color: #e99e95;
     font-family: FontAwesome;
     display: inline-block;
     position: relative;
