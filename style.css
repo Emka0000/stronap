@@ -18,20 +18,15 @@ ul {
   list-style: none;
 }
 
-header img {
-    height: 70px;
-    width: auto;
-    margin-left: 10px;
-}
 
 h2,
 h3,
 a {
-	color: #34495e;
+    color: #34495e;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .header {
@@ -40,12 +35,47 @@ a {
     width: 100%;
     visibility: hidden;
     z-index: 9999;
+
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border: 1px solid #a2a2a2;
+    background-color: #f4f4f4;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 0 0 5px 5px;
+    
+    transition: all 0.2s ease-out;
+}
+.header.transparent:not(.mobile-open) {
+    background-color: #00000000;
+    border-color: #00000000;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.0);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.0);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.0);
+}
+.header.transparent:not(.mobile-open) a {
+    color: white;
 }
 .header.fixed {
     position: fixed;
     visibility: visible;
 }
-
+.header #hamburger {
+    float: right;
+    margin-right: .5em;
+    scale: 75%;
+}
+.header img {
+    height: 70px;
+    width: auto;
+    margin-left: 10px;
+}
+.header.transparent:not(.mobile-open) img {
+    filter: brightness(0) invert(1);
+}
 .main-nav {
 	margin-top: 5px;
 }
@@ -69,18 +99,6 @@ a {
 
 
 
-.header {
-	padding-top: .5em;
-	padding-bottom: .5em;
-	border: 1px solid #a2a2a2;
-	background-color: #f4f4f4;
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 0 0 5px 5px;
-}
 
 .wesprzyj a {
     color: white;
@@ -104,13 +122,14 @@ a {
     vertical-align: middle;
     text-align: center;
     height: fit-content;
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #onas div {
     overflow: hidden;
+    transform: translateY(calc(var(--window-scroll-y) * 0.25));
 }
 
 #onas h1 {
@@ -141,13 +160,19 @@ a {
     font-family: 'Oswald';
     font-size: 17pt;
     margin-bottom: 40px;
-    transition: 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 0.15s cubic-bezier(0.075, 0.82, 0.165, 1) all,
+                0.95s cubic-bezier(0.075, 0.82, 0.165, 1) letter-spacing;
     cursor: pointer;
+    box-shadow: 0 0 15px 0 #00000080;
 }
 #onas button:hover {
     transform: translateY(-4px);
-    box-shadow: 30px 0px 30px -3px #ff2f20bf,
+    box-shadow: 0 0 15px 0 #000000a0,
+                15px 0px 10px -9px #ff4b42,
+                -15px 0px 10px -9px #ff4b42,
+                30px 0px 30px -3px #ff2f20bf,
                 -30px 0px 30px -3px #ff2f20bf;
+    letter-spacing: 4px;
 }
 
 main {
@@ -166,15 +191,13 @@ section {
     font-family: 'Lato', sans-serif;
 }
 #Odkryj > div {
-    width: 100%;
-    clear: both;
     display: flex;
     gap: 4em;
     padding: 2em;
     font-size: 16pt;
 }
-#Odkryj > div:nth-child(even) {
-    float: right;
+#Odkryj > div > div {
+    width: 50%;
 }
 #Odkryj img {
     object-fit: cover;
@@ -287,6 +310,7 @@ details p {
     padding: 0 2em;
     transition: 0.25s ease-in-out;
 }
+
 #Sport div div {
     justify-content: space-between;
     border-radius: 1em;
@@ -345,7 +369,7 @@ details p {
 
 #Sport p {
     font-family: 'Lato';
-    width: calc(600px - 2em);
+    width: auto;
 }
 
 #Sport h2 {
@@ -370,6 +394,21 @@ border-radius: 10px;
     margin-right: 25px;
     vertical-align: middle;
 }
+h6 {
+    font-size: 20px;
+    font-weight: 600;
+    vertical-align: middle;
+    float: left;
+}
+h6 span {
+    font-size: 15px;
+    color: #aaaaaa;
+    font-weight: 400;
+}
+
+#kontakt .item{
+    margin-bottom: 30px;
+}
 /* ================================= 
   Media Queries
 ==================================== */
@@ -385,12 +424,65 @@ border-radius: 10px;
 		flex-direction: column;
 		align-items: center;
     	.header{
-		width: 80%;
-		margin: 0 auto;
-		max-width: 1150px;
-	}
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+	    }
+        
+        #hamburger {
+            visibility: collapse;
+        }
 	}
 
+}
+@media (max-width: 769px) {
+    .header {
+        clip-path: inset(0 0 280px 0);
+
+        &.mobile-open {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+    #onas h1{
+        font-size: 300%!important;
+    }
+    #onas p{
+        font-size: 130%!important;
+    }
+
+}
+@media (max-width: 511px) {
+    #onas h1{
+        font-size: 290%!important;
+    }
+    #onas p{
+        font-size: 120%!important;
+    }
+    
+    #onas button {
+        width: 120px;
+        font-size: 100%!important;
+        height: 55px;
+    }
+    
+}
+@media (max-width: 433px) {
+   #onas h1{
+        font-size: 270%!important;
+    }
+}   
+@media (max-width: 400px) {
+    #onas h1{
+        font-size: 170%!important;
+    }
+    #onas p{
+        font-size: 100%!important;
+    }
+    #onas button {
+        width: 100px;
+        font-size: 100%!important;
+        height: 50px;
+    }
 }
 
 @media (min-width: 1064px) {
@@ -398,5 +490,67 @@ border-radius: 10px;
 		flex-direction: row;
 		justify-content: space-between;
 	}
+}
 
+@media (max-width: 613px) {
+    #onas h1{
+        font-size: 280%!important;
+    }
+    #onas p{
+        font-size: 120%!important;
+    }
+}
+
+@media (max-width: 570px) {
+    #onas p{
+        font-size: 110%!important;
+    }
+}
+
+@media (max-width: 1043px) {
+    #onas h1{
+        font-size:290%!important;
+    }
+}
+
+@media (max-width: 1005px) {
+    #onas h1{
+        font-size: 260%!important;
+    }
+}
+@media (max-width: 995px) {
+    #onas h1{
+        font-size: 250%!important;
+    }
+    #onas p{
+        font-size: 130%!important;
+    }
+}
+
+@media (max-width: 859px) {
+    #onas h1{
+        font-size: 230%!important;
+    }
+    #onas p{
+        font-size: 115%!important;
+    }
+}
+
+
+@media (max-width: 492px) {
+    #onas h1{
+        font-size: 230%!important;
+    }
+    #onas p{
+        font-size: 115%!important;
+    }
+}
+
+@media (max-width: 370px) {
+    #onas h1{
+        font-size: 170%!important;
+    }
+    #onas p{
+        font-size: 100%!important;
+    }
 }
