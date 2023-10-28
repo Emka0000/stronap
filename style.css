@@ -493,7 +493,12 @@ h6 span {
   }
   
   .wrapper {
+<<<<<<< Updated upstream
     height: 128px;
+=======
+    height: 5vh;
+    width: 15vh;
+>>>>>>> Stashed changes
     display: flex;
     justify-content: center;
     align-items: center;
