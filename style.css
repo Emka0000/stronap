@@ -139,6 +139,7 @@ a {
     color: #fff;
     line-height: 1.09;
     letter-spacing: -1.6px;
+    margin: 10px;
 }
 
 
@@ -471,7 +472,6 @@ h6 span {
   background-color: #971f17;
 }
 
-/* Style for the Read More button */
 .read-more-button {
   display: block;
   text-align: center;
@@ -482,6 +482,9 @@ h6 span {
   padding: 15px 30px;
   border-radius: 5px;
   font-weight: bold;
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
 }
 
 .read-more-button:hover {
@@ -493,15 +496,11 @@ h6 span {
   }
   
   .wrapper {
-<<<<<<< Updated upstream
     height: 128px;
-=======
-    height: 5vh;
-    width: 15vh;
->>>>>>> Stashed changes
     display: flex;
     justify-content: center;
     align-items: center;
+    scale: 0.8;
   }
   
   .wrapper {
@@ -518,8 +517,9 @@ h6 span {
       color: white;
       background: #da291c;
       transition: 1s;
-      box-shadow: 6px 6px 0 black;
+      box-shadow: 6px 6px 0 #00000087;
       transform: skewX(-15deg);
+      border-radius: 10px;
   }
   
   .cta:focus {
@@ -528,7 +528,7 @@ h6 span {
   
   .cta:hover {
       transition: 0.5s;
-      box-shadow: 10px 10px 0 #ff8aca;
+      box-shadow: 10px 10px 0 #fcadad;
   }
   
   .cta span:nth-child(2) {
@@ -591,7 +591,7 @@ h6 span {
           fill: white;
       }
       50% {
-          fill: #ff8aca;
+          fill: #fcadad;
       }
       100% {
           fill: white;
@@ -607,6 +607,7 @@ h6 span {
     background-color: #c0392b;
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+    border-radius: 3px 0px 0px 3px;
       
 }
 .wesprzyj:hover { 
@@ -633,6 +634,273 @@ h6 span {
 button {
     cursor:pointer;
 }
+
+/*#zrealizowane-projekty::before {
+    max-width: 100%;
+    position: absolute;
+    content: url("Plama2.svg");
+    right: 32%;
+    z-index: -1;
+    transform: scaleX(-2);
+    margin-top: 650px;
+}
+
+*/
+
+footer .falaa {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+
+}
+
+footer .falaa#fala1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .falaa#fala2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+
+footer .falaa#fala3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .falaa#fala4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 3s linear infinite;
+}
+
+
+
+@keyframes animateWave{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_2{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}                                                      
+#kontakt {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+    min-height: 100px;
+    margin-top: 15%;
+  }
+  
+  .footer-distributed{
+    background: rgb(255, 218, 218);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    min-height: 100px;
+    position: relative;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+
+  .footer-distributed .footer-left img {
+    width: 40%;
+  }
+  
+
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight: 500;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  rgba(52, 73, 94, 0.671);
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  
+  .footer-distributed .footer-center img{
+    width: 38px;
+    height: 38px;
+  }
+
+  
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight:600;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:15px;
+    line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+    color:  #34495e;
+    text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  rgba(52, 73, 94, 0.548);
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-style: none;
+    transform: skewX(0deg);
+  }
+  
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons img{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+    .footer-distributed{
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .footer-distributed .footer-center i{
+      margin-left: 0;
+    }
+  
+  }
   
 /* ================================= 
   Media Queries
